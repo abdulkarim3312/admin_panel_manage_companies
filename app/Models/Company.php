@@ -13,7 +13,7 @@ class Company extends Model
 
     public static function getImageUrl($request)
     {
-        self::$image = $request->file('image');
+        self::$image     = $request->file('image');
         self::$imageName = self::$image->getClientOriginalName();
         self::$directory = 'admin/company-logos/';
         self::$image->move(self::$directory, self::$imageName);

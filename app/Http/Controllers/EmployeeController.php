@@ -31,7 +31,7 @@ class EmployeeController extends Controller
 
     public function manage()
     {
-        $employees = Employee::orderBy('id', 'desc')->paginate(10);
+        $employees = Employee::orderBy('id', 'desc')->paginate(5);
         return view('admin.employee.manage',['employees' => $employees]);
     }
 
